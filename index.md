@@ -28,3 +28,13 @@ in_menu: true
         </div>
     </body>
 </html> 
+
+
+
+![Dessin 1]({% link images/Captufireeeere.PNG %})
+
+![Dessin 1 modifié par IA]({% link images/Sans titbcxgxnnre.jpg %})
+
+![Dessin 2]({% link images/Sans titre.wngnxwnwdfnjpg.jpg %})
+
+![Dessin 2 modifié par IA]({% link images/Sans gbxggftitre.jpg %} 
