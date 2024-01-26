@@ -3,7 +3,6 @@ title: "Accueil"
 order: 0
 in_menu: true
 ---
-<!DOCTYPE html>
 <html>
     <head>
         <title>Custom Slider</title>
