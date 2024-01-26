@@ -21,7 +21,7 @@ in_menu: true
     <div></div>
 </div>
 
-<span>Drag</span>
+
 
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
   <defs>
