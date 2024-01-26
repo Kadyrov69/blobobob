@@ -4,7 +4,7 @@
 
 
 
-* {
+/* {
   box-sizing: border-box;
 }
 body {
@@ -173,7 +173,7 @@ img {
   to {
     transform: skew(calc(var(--skewX) * 1deg), calc(var(--skewY) * 1deg)) translate(0, calc((400 + (var(--height) * 2)) * -1px));
   }
-}
+} */
 
 
 
