@@ -8,9 +8,8 @@ body {
 font-family: papyrus;
 color: #F4780A ;
 * {
+
   box-sizing: border-box;
-}
-body {
   background: #1c0136;
   min-height: 100vh;
 }
