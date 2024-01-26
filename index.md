@@ -68,3 +68,5 @@ in_menu: true
     </ol>
   </aside>
 </section> 
+
+![Texte décrivant l'image]({% link images/dragonus.jpg %}) 
