@@ -17,10 +17,10 @@ in_menu: true
             </div>
 
             <input class="slide-input" id="slide-dot-1" type="radio" name="slides" checked>
-            <img class="slide-img" src=images/Captunnnre.PNG">
+            <img class="slide-img" src="images/Captunnnre.PNG">
 
             <input class="slide-input" id="slide-dot-2" type="radio" name="slides">
-            <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide2.jpg">
+            <img class="slide-img" src="images/Sans v cncxgnxgxtitre.jpg">
 
             <input class="slide-input" id="slide-dot-3" type="radio" name="slides">
             <img class="slide-img" src="https://www.codeur.com/tuto/wp-content/uploads/2021/12/slide3.jpg">
@@ -38,5 +38,7 @@ in_menu: true
 ![Dessin 1 modifié par IA 2]({% link images/Sans v cncxgnxgxtitre.jpg %})
 
 ![Dessin 2]({% link images/Sans titre.wngnxwnwdfnjpg.jpg %})
+
+![Texte décrivant l'image]({% link images/San ccvvcs titre.jpg %})
 
 ![Dessin 2 modifié par IA]({% link images/Sans gbxggftitre.jpg %} 
