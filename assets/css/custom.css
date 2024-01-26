@@ -181,119 +181,131 @@ img {
 
 
 
-@import 'compass/css3';
-@import url('https://fonts.googleapis.com/css?family=Chewy|Gloria+Hallelujah');
-$bg : #121327;
-html { height:100%; width:100%; }
 body{
- margin:0;
- padding:0;
- height:100%;
- width:100%;
- background:$bg;
- overflow:hidden;
- @include filter(hue-rotate(0deg));
- @include animation(huerot 5s ease infinite )
+  margin:0;
+  padding:0;
+  background-color:whitesmoke;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
-/** end for goo container **/
-@function randomNum($min, $max) {
- $rand: random();
- $randomNum: $min + floor($rand * (($max - $min) + 1));
- @return $randomNum;
+  .carouselOfImages{
+  position: relative;
+  margin: auto;
+  overflow: visible;
+  width: 100%;
+}
+.gradient-left{
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to right, whitesmoke, transparent 100%);
+    margin-top: -270px;
+  height: 150px;
+  width: 8%;
+  content: '';
+}
+.gradient-right{
+  display: block;
+  position: relative;
+  float: right;
+  right:0;
+  background-image: linear-gradient(to left, whitesmoke, transparent 100%);
+      margin-top: -150px;
+  height: 150px;
+  width:8%;
+  content: '';
 }
 
-$color:#fff;
-$color2:#5048A0;
-$color3:#85EDE8;
-$color4:#48098b;
-.glowy-blob {
- position:absolute;
- left:50%;
- top:50%;
- @include transform(translate(-50,-50));
- @include filter(url('#goo'));
- div {
-  width:80px;
-  height: 80px;
-  background:$color3;
-  @include border-radius(500px);
-  display: inline-block;
-  position:absolute;
-  box-shadow:0px 0px 50px $color3;
-  $top-collection: 0;
-  $left-collection: 0;
-
-  @for $i from 2 to 17 {
-   $left: randomNum(-60px, 60px);
-   $top: randomNum(-60px, 60px);
-   $randWH : randomNum(30px, 60px);
-   &:nth-child(#{$i}) {
-    width:$randWH;
-    height: $randWH;
-    left:$left;
-   }
-
-   $left-collection: append($left-collection,$left);
-   $top-collection: append($top-collection,$top);
+.carouselImage {
+    position: relative;
+    width: 20%;
+    height: 45px;
+    padding: 24px;
+    border: 1.5px solid black;
+    margin-right: 33px;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    counter-increment: carousel-cell;
+    text-align: center;
+    vertical-align: center;
+    transition: transform 0.5s;
+    font-size: 1.2em;
   }
-
-  @for $i from 1 to length($top-collection) {
-   &:nth-child(#{$i}) {
-    top: 0;
-    left: 0;
-    @include animation(anim-#{$i} 2.5s ease-in-out infinite);
-    @if($i == 1) {
-     @include animation-delay(0s);
+@media only screen and (max-width: 1300px){
+    .carouselImage{
+        width: 30%;
     }
-    @else {
-     @include animation-delay(randomNum(1s,3s));
+}
+@media only screen and (max-width: 773px){
+    .carouselImage{
+        width: 50%;
     }
-  }
-  /**keyframes **/
-   @include keyframes(anim-#{$i}) {
-    0%{left:0;top:0}
-    50% { left:nth($left-collection, $i+1);top:nth($top-collection, $i)}
-    100%{left:0;top:0}
-   }
-  } //end of collection loop
-  &:hover {
-   cursor:default;
-  }
- } //end of div
 
-} //end of glowby-blob
+}
+@media only screen and (max-width: 490px){
+    .carouselImage{
+        width: 50%;
+        padding: 15px;
+    }
 
- span {
-  color:$color3;
-  opacity: 0.5;
-  font-size: 24px;
-  font-family:'Chewy';
-  font-weight: bolder;
-  text-transform: uppercase;
-  letter-spacing:1px;
+}
+
+
+.carouselImage.is-selected {
+
+border: 1.5px solid #00ADEE;
+color:#00ADEE;
+  z-index:10;
+  transform: scale(1);
+}
+.carouselImage.nextToSelectedLeft, .carouselImage.nextToSelectedRight {
+  transform: scale(1);
+  z-index:5;
+}
+
+/*! Flickity v2.0.5
+https://flickity.metafizzy.co
+---------------------------------------------- */
+
+.flickity-enabled {
+  position: relative;
+}
+
+/* .flickity-enabled:focus { outline: none; } */
+
+.flickity-viewport {
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.flickity-slider {
   position: absolute;
-  left:50%;
-  top:30%;
-  @include transform(translate(-50,-50));
-  -webkit-touch-callout: none; /* iOS Safari */
-  @include user-select(none);
-   &:hover {
-     cursor:default;
-   }
- }
-
-@include keyframes(huerot) {
- 0%{@include filter(hue-rotate(0deg));}
- 100%{@include filter(hue-rotate(360deg));}
-}
-@include keyframes(bounceback) {
- 100%{left:0;top:0}
+  width: 100%;
+  height: 100%;
 }
 
+/* draggable */
 
+.flickity-enabled.is-draggable {
+  -webkit-tap-highlight-color: transparent;
+/*           tap-highlight-color: transparent; */
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
 
+.flickity-enabled.is-draggable .flickity-viewport {
+  cursor: move;
+  cursor: -webkit-grab;
+  cursor: grab;
+}
 
-
-
-
-
+.flickity-enabled.is-draggable .flickity-viewport.is-pointer-down {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
+.flickity-viewport {
+    margin: 0px;
+    width: 100%;
+    margin-bottom: 100px;
+}
