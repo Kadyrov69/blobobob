@@ -35,6 +35,8 @@ in_menu: true
 
 ![Dessin 1 modifié par IA]({% link images/Sans titbcxgxnnre.jpg %})
 
+![Dessin 1 modifié par IA 2]({% link images/Sans v cncxgnxgxtitre.jpg %})
+
 ![Dessin 2]({% link images/Sans titre.wngnxwnwdfnjpg.jpg %})
 
 ![Dessin 2 modifié par IA]({% link images/Sans gbxggftitre.jpg %} 
