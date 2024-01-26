@@ -13,7 +13,7 @@ in_menu: true
         tabindex="0"
         class="carousel__slide">
       <div class="carousel__snapper">
-        <a href="#carousel__slide4"
+        <img src="/blobobob/images/dragonus.jpg" href="#carousel__slide4"
            class="carousel__prev">Go to last slide</a>
         <a href="#carousel__slide2"
            class="carousel__next">Go to next slide</a>
