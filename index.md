@@ -3,7 +3,7 @@ title: "Accueil"
 order: 0
 in_menu: true
 ---
-<h1>CSS-only Carousel</h1>
+<h1>Mon caroussel, ma chariole du diable</h1>
 
 <p>This carousel is created with HTML and CSS only.</p>
 
